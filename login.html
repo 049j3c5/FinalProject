@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script>
+    // Slideshow code
+    const slideshowImages = document.querySelectorAll(".slideshow-container img");
+    let index = 0;
+
+    function fadeOut() {
+      slideshowImages[index].style.opacity = 0;
+    }
+
+    function fadeIn() {
+      slideshowImages[index].style.opacity = 1;
+    }
+
+    function nextImage() {
+      fadeOut();
+      index = (index + 1) % slideshowImages.length;
+      fadeIn();
+    }
+
+    setInterval(nextImage, 3000);
+  </script>
+</head>
+<body >
+<div class="slideshow-container">
+    <img class="fade" src="image1.jpg" alt="Image 1">
+    <img src="image2.jpg" alt="Image 2">
+    <img src="image3.jpg" alt="Image 3">
+  </div>
+ <div class="login-form">
+    <center><h1>Login</h1>
+    <form method="post" action="login.php">
+        <label for="Loginid">Loginid:</label>
+        <input type="text" name="loginid"><br><br>
+        <label for="Password">Password:</label>
+        <input type="password" name="password"><br><br>
+        <input type="Submit" name="submit">
+    </form>
+</center>
+  </div>
+</body>
+</html>
